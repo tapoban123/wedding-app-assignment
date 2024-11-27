@@ -1,0 +1,1 @@
+## It's better if you play the videos on [VLC Media player](https://www.videolan.org/vlc/). <br> For some reason I encountered issues while playing the video on other media players.
