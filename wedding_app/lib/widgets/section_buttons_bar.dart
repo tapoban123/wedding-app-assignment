@@ -15,7 +15,7 @@ enum Section {
 
 class SectionButtonsBar extends StatefulWidget {
   /// This [Widget] is used on [BulkFoodDeliveryPage].
-  /// 
+  ///
   /// Allows the user to switch from BulkFoodDelivery to CateringService.
   const SectionButtonsBar({super.key});
 
@@ -139,101 +139,3 @@ class _SectionButtonsBarState extends State<SectionButtonsBar>
     );
   }
 }
-
-
-// class SectionButtonsBar extends StatefulWidget {
-//   const SectionButtonsBar({super.key});
-
-//   @override
-//   State<SectionButtonsBar> createState() => _SectionButtonsBarState();
-// }
-
-// class _SectionButtonsBarState extends State<SectionButtonsBar> {
-//   ValueNotifier<bool> cateringServiceSelected = ValueNotifier(false);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return SizedBox(
-//       width: double.infinity,
-//       height: 100,
-//       child: ValueListenableBuilder(
-//         valueListenable: cateringServiceSelected,
-//         builder: (context, cateringService, child) => LayoutBuilder(
-//           builder: (context, constraints) {
-//             final parentWidth = constraints.maxWidth;
-//             final parentHeight = constraints.maxHeight;
-
-//             return Stack(
-//               alignment: Alignment.topLeft,
-//               children: [
-//                 AnimatedPositionedDirectional(
-//                   duration: const Duration(milliseconds: 200),
-//                   curve: Curves.easeIn,
-//                   start: cateringService ? parentWidth * 0.52 : 0,
-//                   child: Container(
-//                     width: parentWidth * 0.48,
-//                     height: 56,
-//                     decoration: const BoxDecoration(
-//                       color: Colors.white,
-//                       borderRadius: BorderRadius.only(
-//                         topLeft: Radius.circular(14),
-//                         topRight: Radius.circular(14),
-//                       ),
-//                     ),
-//                     alignment: Alignment.topCenter,
-//                     padding: const EdgeInsets.only(top: 14),
-//                   ),
-//                 ),
-//                 AnimatedPositionedDirectional(
-//                   duration: const Duration(milliseconds: 200),
-//                   curve: Curves.easeInExpo,
-//                   end: cateringService ? parentWidth * 0.52 : 0,
-//                   child: GestureDetector(
-//                     onTap: () {
-//                       cateringServiceSelected.value =
-//                           !cateringServiceSelected.value;
-//                     },
-//                     child: Container(
-//                       width: parentWidth * 0.48,
-//                       height: 40,
-//                       decoration: BoxDecoration(
-//                         color: Colors.white.withOpacity(0.85),
-//                         borderRadius: BorderRadius.circular(14),
-//                       ),
-//                     ),
-//                   ),
-//                 ),
-//                 Positioned(
-//                   left: parentWidth * 0.05,
-//                   top: 10,
-//                   child: GestureDetector(
-//                     onTap: () {
-//                       if (cateringService) {
-//                         cateringServiceSelected.value =
-//                             !cateringServiceSelected.value;
-//                       }
-//                     },
-//                     child: const Text("Bulk Food Delivery"),
-//                   ),
-//                 ),
-//                 Positioned(
-//                   right: parentWidth * 0.07,
-//                   top: 10,
-//                   child: GestureDetector(
-//                     onTap: () {
-//                       if (cateringService == false) {
-//                         cateringServiceSelected.value =
-//                             !cateringServiceSelected.value;
-//                       }
-//                     },
-//                     child: const Text("Catering Service"),
-//                   ),
-//                 )
-//               ],
-//             );
-//           },
-//         ),
-//       ),
-//     );
-//   }
-// }
